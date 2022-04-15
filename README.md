@@ -1,5 +1,5 @@
 # 2022年度内田・備瀬・Iwana研新人課題 
-English follows Japanese.  aaaa
+English follows Japanese.  
 研究を本格的に始める前の準備として行う，新人課題です．  
 2022年4月25日（月）を締め切りとします．
 
