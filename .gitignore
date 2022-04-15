@@ -1,3 +1,3 @@
-2_MedicalImageClassification/Dataset/train/
-2_MedicalImageClassification/Dataset/test/
-2_MedicalImageClassification/Dataset/valid/
+source/Dataset/train/
+source/Dataset/test/
+source/Dataset/valid/
