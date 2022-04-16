@@ -2,6 +2,7 @@ import cv2
 import glob
 import matplotlib.pyplot as plt
 import numpy as np
+from torch import int8
 
 def load_image(file_name: str): 
     """
@@ -36,8 +37,8 @@ def load_each_set(set_name: str):
         dataset = load_dir('Dataset/' + set_name + '/' + str(label) +'/')
         for data in dataset:
             x.append(data)
-            y.append(label)
-    return np.array(x), np.array(y).astype('float32')
+            y.append(np.array([label]).astype(np.uint8))
+    return np.array(x), np.array(y)
 
 def load_all_set():
     """
