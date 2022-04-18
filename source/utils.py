@@ -1,4 +1,4 @@
-import cv2
+from PIL import Image
 import glob
 import matplotlib.pyplot as plt
 import numpy as np
@@ -9,10 +9,10 @@ def load_image(file_name: str):
     load image(.png) and convert into np.ndarray
     """
 
-    image = cv2.imread(file_name)
-    image = image[..., ::-1] # BGR -> RGB
-    image = image / 255.0 # float64
-    image = image.astype('float32') # float64 -> float32
+    image = Image.open(file_name)
+    # image = image[..., ::-1] # BGR -> RGB
+    # image = image / 255.0 # float64
+    # image = image.astype('float32') # float64 -> float32
     return image
 
 def load_dir(dir_name: str):
@@ -24,7 +24,7 @@ def load_dir(dir_name: str):
     for path in path_in_dir:
         image = load_image(path)
         output.append(image)
-    output = np.array(output)
+    # output = np.array(output)
     return output
 
 def load_each_set(set_name: str):
@@ -38,7 +38,9 @@ def load_each_set(set_name: str):
         for data in dataset:
             x.append(data)
             y.append(np.array([label]).astype(np.uint8))
-    return np.array(x), np.array(y)
+    # x = np.array(x)
+    # y = np.array(y)
+    return x, y
 
 def load_all_set():
     """
